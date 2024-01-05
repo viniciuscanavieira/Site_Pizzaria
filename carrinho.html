@@ -1,0 +1,91 @@
+<!-- Carrinho.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <title>Carrinho</title>
+</head>
+<body>
+    <header class="content">
+        <div class="logo">
+            <img src="pngtree-cartoon-yellow-pizza-illustration-png-image_4634672-removebg-preview.png" alt="">
+            <h3>PizzaShop</h3>
+        </div>
+        <nav>
+            <ul class="list-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobrenos">Sobre nós</a></li>
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="#contatos">Contatos</a></li>
+                <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                <li><a href="#"><i class="bi bi-whatsapp"></i></a></li>
+                <li><a href="#"><i class="bi bi-cart3"></i></a></li>
+            </ul>
+        </nav>
+
+        <div class="menu-toggle">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+        </div>
+    </header>
+    <section class="first-section" id="home">
+        <div class="conteudo-principal">
+            <h1>A receita perfeita para momentos especiais!!</h1>
+            <h2>Sabor que faz a diferença!</h2>
+            <h3>Monte de acordo com sua preferencia</h3>
+            <div class="bnt">
+                <button class="montar" >Montar a sua pizza!</button>
+            </div>
+        </div>
+    </section>
+    
+    <section class="carrinho">
+        <h2>Seu Carrinho</h2>
+        <div class="itens-selecionados-carrinho">
+            <!-- Os itens selecionados serão exibidos aqui -->
+        </div>
+        <div class="saborpizza">
+            <label for="saborpizza">Sabor pizza</label>
+            <select name="saborpizza" id="saborpizza">
+            <option value="frango">Pizza Frango</option>
+        </select>
+        </div>
+        <div class="observacao">
+            <label for="observacao">Alguma observação?</label>
+            <textarea id="observacao" name="observacao" rows="4"></textarea>
+        </div>
+        <div class="acompanhamento">
+            <label for="refri">Deseja adicionar refrigerante?</label>
+            <select id="refri" name="refri" onchange="mostrarOpcoes()">
+                
+                <option value="nao">Não</option>
+                <option value="sim">Sim</option>
+            </select>
+        </div>
+        <div class="opcoesRefri" id="opcoesRefri" >
+            <label for="tipoRefri">Escolha o refrigerante:</label>
+            <select id="tipoRefri" name="tipoRefri" onchange="desativarOpcaoVazia()">
+                <option value="" disabled hidden selected></option>
+                <option value="coca">Coca-Cola</option>
+                <option value="pepsi">Pepsi</option>
+                <option value="guarana">Guaraná</option>
+            </select>
+        </div>
+       
+        <div class="bnt">
+        <button class="finalizar">Finalizar Pedido</button>
+        </div>
+    </section>
+
+    <footer>
+        <h4>Desenvolvido por -> Seu Nome ou Empresa</h4>
+    </footer>
+    <script src="script-carrinho.js"></script>
+</body>
+</html>
